@@ -1,8 +1,8 @@
 services:
-  # API .NET
+  # API .NET (Dockerfile en la raíz)
   - type: web
     name: celscrapper-api
-    env: docker
+    runtime: docker
     plan: free
     dockerfilePath: ./Dockerfile
     autoDeploy: true
@@ -12,14 +12,13 @@ services:
       - key: ASPNETCORE_URLS
         value: http://0.0.0.0:${PORT}
 
-  # Web estática (tu home.html está en CelTechScrapper/web/)
-  - type: static_site
+  # Sitio estático (sirve CelTechScrapper/web/home.html)
+  - type: web
     name: celscrapper-web
+    runtime: static
     rootDir: ./CelTechScrapper/web
-    buildCommand: ""
     staticPublishPath: .
-    autoDeploy: true
-    indexDocument: home.html
+    buildCommand: ""
     routes:
       - type: rewrite
         source: /*
