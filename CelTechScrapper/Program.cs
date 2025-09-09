@@ -42,12 +42,12 @@ builder.Services.AddScoped<ManejadorConectividad>();
 builder.Services.AddScoped<IOverpassService, OverpassService>();
 var app = builder.Build();
 
-// Swagger
-if (app.Environment.IsDevelopment())
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "CelScrapper v1");
+    c.RoutePrefix = "swagger"; // deja la UI en /swagger
+});
+
 app.UseCors();
 app.UseRouting();
 app.UseAuthorization();
