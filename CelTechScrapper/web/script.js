@@ -64,7 +64,7 @@ function getSearchParameters() {
     zona: document.getElementById("zona").value,
     ambientes: document.getElementById("ambientes").value,
     paginas: document.getElementById("paginas").value,
-    incluirScore: document.getElementById("incluirScore").checked,
+    //incluirScore: document.getElementById("incluirScore").checked,
   }
 }
 
