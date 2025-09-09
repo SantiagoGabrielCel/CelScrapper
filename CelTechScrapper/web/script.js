@@ -1,5 +1,5 @@
 // API Configuration
-const API_BASE = "https://localhost:7260/api/Propiedades"
+const API_BASE = "https://celtechscrapperalquileres.onrender.com/api/Propiedades"
 
 // Main search function
 async function buscarPropiedades() {
