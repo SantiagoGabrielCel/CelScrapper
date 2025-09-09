@@ -1,26 +1,30 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Eliminando emoji del título para que se vea más profesional -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#006d77" />
     <title>Scrapper de Argenprop - Búsqueda Profesional de Propiedades</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 </head>
 <body>
     <div class="container">
         <!-- Header Section -->
         <header class="header fade-in">
-            <!-- Agregando logo de Yes Man con animación dropdown -->
             <div class="header-content">
                 <div class="logo-container">
-                    <img src="fallout-new-vegas-yes-man-wallpaper-preview.jpg" alt="Yes Man Logo" class="logo-dropdown" id="yesmanLogo">
+                    <img src="fallout-new-vegas-yes-man-wallpaper-preview.jpg"
+                         alt="Yes Man Logo"
+                         class="logo-dropdown"
+                         id="yesmanLogo"
+                         loading="lazy"
+                         decoding="async" />
                 </div>
                 <div class="header-text">
-                    <!-- Eliminando emoji del título principal -->
-                    <h1>Scrapeo de propiedades  </h1>
+                    <h1>Scrapeo de propiedades</h1>
                     <h2>By null</h2>
                     <p>Extracción Profesional de Datos Inmobiliarios</p>
                 </div>
@@ -29,16 +33,12 @@
 
         <!-- Search Section -->
         <section class="search-section slide-up">
-            <!-- Eliminando emoji del subtítulo de búsqueda -->
-            <h2 class="search-title">
-                Configurar Búsqueda
-            </h2>
+            <h2 class="search-title">Configurar Búsqueda</h2>
 
             <div class="controls-grid">
                 <div class="control-group">
                     <label for="tipo">Tipo de Propiedad</label>
                     <select id="tipo" class="form-select">
-                        <!-- Eliminando emojis de las opciones del select -->
                         <option value="Departamentos" selected>Departamentos</option>
                         <option value="Casas">Casas</option>
                         <option value="PH">PH</option>
@@ -48,7 +48,6 @@
                 <div class="control-group">
                     <label for="operacion">Tipo de Operación</label>
                     <select id="operacion" class="form-select">
-                        <!-- Eliminando emojis de las opciones de operación -->
                         <option value="Alquiler" selected>Alquiler</option>
                         <option value="Venta">Venta</option>
                     </select>
@@ -57,7 +56,6 @@
                 <div class="control-group">
                     <label for="zona">Zona de Búsqueda</label>
                     <select id="zona" class="form-select">
-                        <!-- Eliminando emojis de las zonas -->
                         <option value="Agronomia">Agronomia</option>
                         <option value="Almagro">Almagro</option>
                         <option value="Balvanera">Balvanera</option>
@@ -121,45 +119,42 @@
 
                 <div class="control-group">
                     <label for="paginas">Páginas a Procesar</label>
-                    <input type="number" id="paginas" class="form-input" value="2" min="1" max="10">
+                    <input type="number" id="paginas" class="form-input" value="2" min="1" max="10" />
                 </div>
 
                 <div class="control-group">
                     <div class="checkbox-wrapper">
-                        <input type="checkbox" id="incluirScore">
-                        <!-- Eliminando emoji del checkbox -->
+                        <input type="checkbox" id="incluirScore" />
                         <label for="incluirScore">Incluir Score de Calidad</label>
                     </div>
                 </div>
             </div>
 
-            <!-- Eliminando emoji del botón de búsqueda -->
-            <button class="search-button" onclick="buscarPropiedades()">
+            <button class="search-button" onclick="buscarPropiedades()" aria-label="Iniciar búsqueda">
                 Iniciar Búsqueda
             </button>
         </section>
 
         <!-- Loading State -->
-        <div class="loading" id="loading">
-            <div class="spinner"></div>
+        <div class="loading" id="loading" role="status" aria-live="polite">
+            <div class="spinner" aria-hidden="true"></div>
             <h3>Extrayendo propiedades...</h3>
             <p>Procesando múltiples fuentes de datos inmobiliarios</p>
         </div>
 
         <!-- Error State -->
-        <div class="error" id="error"></div>
+        <div class="error" id="error" role="alert" aria-live="assertive"></div>
 
         <!-- Results Section -->
         <section class="results-section">
             <div class="stats-card" id="stats">
-                <div class="stats-text" id="statsText"></div>
+                <div class="stats-text" id="statsText" aria-live="polite"></div>
             </div>
 
-            <div class="table-container">
+            <div class="table-container" role="region" aria-label="Resultados">
                 <table class="properties-table" id="propertiesTable">
                     <thead>
                         <tr>
-                            <!-- Eliminando todos los emojis de los headers de la tabla -->
                             <th>Título</th>
                             <th>Precio</th>
                             <th>Dirección</th>
@@ -167,8 +162,7 @@
                             <th>Enlace</th>
                         </tr>
                     </thead>
-                    <tbody id="propertiesBody">
-                    </tbody>
+                    <tbody id="propertiesBody"></tbody>
                 </table>
             </div>
         </section>
