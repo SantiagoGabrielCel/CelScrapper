@@ -12,10 +12,15 @@ services:
       - key: ASPNETCORE_URLS
         value: http://0.0.0.0:${PORT}
 
-  
-  - type: static
+  # Web estática (tu home.html está en CelTechScrapper/web/)
+  - type: static_site
     name: celscrapper-web
-    rootDir: ./web
+    rootDir: ./CelTechScrapper/web
     buildCommand: ""
     staticPublishPath: .
     autoDeploy: true
+    indexDocument: home.html
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /home.html
