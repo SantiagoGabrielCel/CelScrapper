@@ -1,0 +1,21 @@
+services:
+  # API .NET
+  - type: web
+    name: celscrapper-api
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: ASPNETCORE_URLS
+        value: http://0.0.0.0:${PORT}
+
+  
+  - type: static
+    name: celscrapper-web
+    rootDir: ./web
+    buildCommand: ""
+    staticPublishPath: .
+    autoDeploy: true
