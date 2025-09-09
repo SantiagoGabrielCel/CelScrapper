@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RZL5o5ujTtk7qVzxdtoFuX6kTyNsxkfxiGKgl8ukC1VBvSBW2RUViincmklBIdxzIKUPHtvVFt0p7257AHxT7g==",
+  "dgSpecHash": "jqEbj0KQFrxJBbz/RkiXAmheJ7jXfR7YhdOnhlZrZCmvC2SVnPMD39yRzIn9qnl44yubW54bdKRZwH21ZNoM0g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\TT\\source\\repos\\CelTechScrapper\\CelTechScrapper\\CelTechScrapper.csproj",
+  "projectFilePath": "C:\\Users\\TT\\source\\repos\\CelScrapper\\CelTechScrapper\\CelTechScrapper.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TT\\.nuget\\packages\\flurl\\4.0.0\\flurl.4.0.0.nupkg.sha512",
     "C:\\Users\\TT\\.nuget\\packages\\flurl.http\\4.0.2\\flurl.http.4.0.2.nupkg.sha512",

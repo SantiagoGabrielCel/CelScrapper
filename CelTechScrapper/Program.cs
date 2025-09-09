@@ -53,5 +53,6 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllers();
-
+app.MapGet("/", () => Results.Ok("CelScrapper API up"));
+app.MapGet("/health", () => Results.Ok("ok"));
 app.Run();

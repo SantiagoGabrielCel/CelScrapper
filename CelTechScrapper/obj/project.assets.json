@@ -604,11 +604,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TT\\source\\repos\\CelTechScrapper\\CelTechScrapper\\CelTechScrapper.csproj",
+      "projectUniqueName": "C:\\Users\\TT\\source\\repos\\CelScrapper\\CelTechScrapper\\CelTechScrapper.csproj",
       "projectName": "CelTechScrapper",
-      "projectPath": "C:\\Users\\TT\\source\\repos\\CelTechScrapper\\CelTechScrapper\\CelTechScrapper.csproj",
+      "projectPath": "C:\\Users\\TT\\source\\repos\\CelScrapper\\CelTechScrapper\\CelTechScrapper.csproj",
       "packagesPath": "C:\\Users\\TT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TT\\source\\repos\\CelTechScrapper\\CelTechScrapper\\obj\\",
+      "outputPath": "C:\\Users\\TT\\source\\repos\\CelScrapper\\CelTechScrapper\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
