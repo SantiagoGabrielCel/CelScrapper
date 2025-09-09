@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Eliminando emoji del título para que se vea más profesional -->
+    <title>CelTech Property Scraper - Búsqueda Profesional de Propiedades</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header fade-in">
+            <!-- Agregando logo de Yes Man con animación dropdown -->
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="fallout-new-vegas-yes-man-wallpaper-preview.jpg" alt="Yes Man Logo" class="logo-dropdown" id="yesmanLogo">
+                </div>
+                <div class="header-text">
+                    <!-- Eliminando emoji del título principal -->
+                    <h1>CelTech Property Scraper</h1>
+                    <p>Extracción Profesional de Datos Inmobiliarios</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section slide-up">
+            <!-- Eliminando emoji del subtítulo de búsqueda -->
+            <h2 class="search-title">
+                Configurar Búsqueda
+            </h2>
+
+            <div class="controls-grid">
+                <div class="control-group">
+                    <label for="tipo">Tipo de Propiedad</label>
+                    <select id="tipo" class="form-select">
+                        <!-- Eliminando emojis de las opciones del select -->
+                        <option value="Departamentos" selected>Departamentos</option>
+                        <option value="Casas">Casas</option>
+                        <option value="PH">PH</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="operacion">Tipo de Operación</label>
+                    <select id="operacion" class="form-select">
+                        <!-- Eliminando emojis de las opciones de operación -->
+                        <option value="Alquiler" selected>Alquiler</option>
+                        <option value="Venta">Venta</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="zona">Zona de Búsqueda</label>
+                    <select id="zona" class="form-select">
+                        <!-- Eliminando emojis de las zonas -->
+                        <option value="Palermo" selected>Palermo</option>
+                        <option value="Recoleta">Recoleta</option>
+                        <option value="Belgrano">Belgrano</option>
+                        <option value="Villa Crespo">Villa Crespo</option>
+                        <option value="Caballito">Caballito</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="ambientes">Cantidad de Ambientes</label>
+                    <select id="ambientes" class="form-select">
+                        <option value="1">1 Ambiente</option>
+                        <option value="2" selected>2 Ambientes</option>
+                        <option value="3">3 Ambientes</option>
+                        <option value="4">4+ Ambientes</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="paginas">Páginas a Procesar</label>
+                    <input type="number" id="paginas" class="form-input" value="2" min="1" max="10">
+                </div>
+
+                <div class="control-group">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="incluirScore">
+                        <!-- Eliminando emoji del checkbox -->
+                        <label for="incluirScore">Incluir Score de Calidad</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Eliminando emoji del botón de búsqueda -->
+            <button class="search-button" onclick="buscarPropiedades()">
+                Iniciar Búsqueda
+            </button>
+        </section>
+
+        <!-- Loading State -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <h3>Extrayendo propiedades...</h3>
+            <p>Procesando múltiples fuentes de datos inmobiliarios</p>
+        </div>
+
+        <!-- Error State -->
+        <div class="error" id="error"></div>
+
+        <!-- Results Section -->
+        <section class="results-section">
+            <div class="stats-card" id="stats">
+                <div class="stats-text" id="statsText"></div>
+            </div>
+
+            <div class="table-container">
+                <table class="properties-table" id="propertiesTable">
+                    <thead>
+                        <tr>
+                            <!-- Eliminando todos los emojis de los headers de la tabla -->
+                            <th>Título</th>
+                            <th>Precio</th>
+                            <th>Dirección</th>
+                            <th>Descripción</th>
+                            <th>Enlace</th>
+                        </tr>
+                    </thead>
+                    <tbody id="propertiesBody">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

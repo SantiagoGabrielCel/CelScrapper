@@ -1,0 +1,156 @@
+[
+  {
+    "ContainingType": "CelTechScrapper.Controllers.ConectividadController",
+    "Method": "Calcular",
+    "RelativePath": "api/Conectividad",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "direccion",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controladores.PropiedadesController",
+    "Method": "Obtener",
+    "RelativePath": "api/Propiedades",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operacion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "zona",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "maxPaginas",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ambientes",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "incluirScore",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CelTechScrapper.Dominio.Entidades.Propiedad, CelTechScrapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SaturacionController",
+    "Method": "ObtenerIndice",
+    "RelativePath": "api/Saturacion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "zonas",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "tipo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operacion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "maxPaginas",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CelTechScrapper.CasosDeUso.ObtenerIndiceSaturacion.SaturacionDTO, CelTechScrapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CelTechScrapper.Controllers.SimuladorController",
+    "Method": "Simular",
+    "RelativePath": "api/Simulador",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ingresoMensual",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "tipo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operacion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "zona",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "maxPaginas",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CelTechScrapper.DTO.ResultadoSimulador",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
