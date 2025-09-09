@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CelTechScrapper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e48adacafa029aaa4f14091973fe6fb6c8355c20")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+964fd28f7e7914484bac1ab95194a43fd6d01d81")]
 [assembly: System.Reflection.AssemblyProductAttribute("CelTechScrapper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CelTechScrapper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
